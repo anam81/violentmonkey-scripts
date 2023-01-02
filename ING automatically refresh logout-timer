@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            ING automatically refresh logout-timer
-// @version         1.0.1
+// @version         1.0.0
 // @description     Automatically refreshs ING logout-timer randomly every 1 to 3 minutes
 // @author          -aman-
 // @match           https://banking.ing.de/app/*
