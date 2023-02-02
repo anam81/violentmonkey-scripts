@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            ING automatically refresh logout-timer
-// @version         1.0.1
+// @version         1.0.0
 // @description     Automatically refreshs ING logout-timer randomly every 1 to 4 minutes
 // @author          -aman-
 // @match           https://banking.ing.de/app/*
@@ -8,9 +8,10 @@
 
 var a = Math.random() * 180 + 60;
 var i;
-i = window.setTimeout(clickButton, a * 1000);
+i = window.setInterval(clickButton, a * 1000);
 function clickButton() {
     document.querySelector("button.ing-sn-session-button__timer").click();
     a = Math.random() * 180 + 60;
-    i = window.setTimeout(clickButton, a * 1000);
+    clearInterval(i);
+    i = window.setInterval(clickButton, a * 1000);
 }
